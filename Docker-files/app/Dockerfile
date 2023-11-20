@@ -3,7 +3,7 @@ LABEL "Project"="VProfile"
 LABEL "Author"="Luis Nunez"
 
 RUN apt update && apt install -y maven 
-RUN git clone git@github.com:ldnunez/vprofile-project.git
+RUN git clone https://github.com/ldnunez/vprofile-project.git
 RUN cd vprofile-project && git checkout docker && mvn install
 
 FROM tomcat:9-jre11
